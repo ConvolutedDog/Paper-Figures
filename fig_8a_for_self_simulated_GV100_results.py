@@ -329,18 +329,18 @@ def plot_figure_Cycle_Error_Rate(style_label=""):
     global MAPE_ASIM_GLOBAL
     global MAPE_PPT_GLOBAL
     global MAPE_OURS_GLOBAL
-    penguin_means['ASIM (MAE: '+str(MAPE_ASIM_GLOBAL*100)+'%, Corr.: '+str(asim_corr_GLOBAL)+')'] = tuple(float("%.2f" % float(ASIM_Cycle_Error_Rate_list[_])) for _ in range(len(ASIM_Cycle_Error_Rate_list)))
-    penguin_means['PPT (MAE: '+str(MAPE_PPT_GLOBAL*100)+'%, Corr.: '+str(ppt_corr_GLOBAL)+')'] = tuple(float("%.2f" % float(PPT_Cycle_Error_Rate_list[_])) for _ in range(len(PPT_Cycle_Error_Rate_list)))
-    penguin_means['HyFiSS (MAE: '+str(MAPE_OURS_GLOBAL*100)+'%, Corr.: '+str(ours_corr_GLOBAL)+')'] = tuple(float("%.2f" % float(OURS_Cycle_Error_Rate_list[_])) for _ in range(len(OURS_Cycle_Error_Rate_list)))
+    penguin_means['ASIM (MAPE: '+str(MAPE_ASIM_GLOBAL*100)+'%, Corr.: '+str(asim_corr_GLOBAL)+')'] = tuple(float("%.2f" % float(ASIM_Cycle_Error_Rate_list[_])) for _ in range(len(ASIM_Cycle_Error_Rate_list)))
+    penguin_means['PPT (MAPE: '+str(MAPE_PPT_GLOBAL*100)+'%, Corr.: '+str(ppt_corr_GLOBAL)+')'] = tuple(float("%.2f" % float(PPT_Cycle_Error_Rate_list[_])) for _ in range(len(PPT_Cycle_Error_Rate_list)))
+    penguin_means['HyFiSS (MAPE: '+str(MAPE_OURS_GLOBAL*100)+'%, Corr.: '+str(ours_corr_GLOBAL)+')'] = tuple(float("%.2f" % float(OURS_Cycle_Error_Rate_list[_])) for _ in range(len(OURS_Cycle_Error_Rate_list)))
 
     x = np.arange(len(species))
     width = 0.16
     multiplier = 0
     color = ['#4eab90', '#c55a11', '#eebf6d']
     hatch = ['//', '\\\\', 'x']
-    cluster_name = ['PPT (MAE: '+str(MAPE_PPT_GLOBAL*100)+'%, Corr.: '+str(ppt_corr_GLOBAL)+')', \
-                    'ASIM (MAE: '+str(MAPE_ASIM_GLOBAL*100)+'%, Corr.: '+str(asim_corr_GLOBAL)+')', \
-                    'HyFiSS (MAE: '+str(MAPE_OURS_GLOBAL*100)+'%, Corr.: '+str(ours_corr_GLOBAL)+')']
+    cluster_name = ['PPT (MAPE: '+str(MAPE_PPT_GLOBAL*100)+'%, Corr.: '+str(ppt_corr_GLOBAL)+')', \
+                    'ASIM (MAPE: '+str(MAPE_ASIM_GLOBAL*100)+'%, Corr.: '+str(asim_corr_GLOBAL)+')', \
+                    'HyFiSS (MAPE: '+str(MAPE_OURS_GLOBAL*100)+'%, Corr.: '+str(ours_corr_GLOBAL)+')']
     
     for attribute, measurement in penguin_means.items():
         offset = (width + 0.05) * multiplier
