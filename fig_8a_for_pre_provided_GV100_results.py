@@ -142,7 +142,7 @@ def read_xlsx_GPU_Cycle_Error_Rate(file_name="", NCU_sheet_name="", PPT_sheet_na
                 print("Error: Duplicated key in NCU_Cycle")
                 exit(0)
     
-    ERROR_D = 0.7
+    ERROR_D = 65536.
 
     for idx, row in data_OURS.iterrows():
         kernel_name = row["Unnamed: 0"]
