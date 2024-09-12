@@ -391,7 +391,7 @@ def read_xlsx_L2_Hit_Rate(indexes, file_name="", NCU_sheet_name="", PPT_sheet_na
 
     return NCU_L2_Hit_Rate_Error_Rate, OURS_L2_Hit_Rate_Error_Rate
 
-ERROR_D = 0.7
+ERROR_D = 65536.
 
 def read_xlsx_GPU_Cycle_Error_Rate(file_name="", NCU_sheet_name="", PPT_sheet_name="", ASIM_sheet_name="", OURS_sheet_name=""):
 
